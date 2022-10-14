@@ -1,0 +1,7 @@
+all: generator dumper
+
+generator: generator.cpp logger.cpp  log_message.cpp 
+	g++ -o  generator generator.cpp logger.cpp log_message.cpp -lsqlite3
+
+dumper: dumper.cpp logger.cpp log_message.cpp 
+	g++ -o dumper dumper.cpp logger.cpp log_message.cpp  -lsqlite3
